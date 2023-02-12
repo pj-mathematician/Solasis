@@ -13,6 +13,11 @@ import solana from "./assets/solana.svg";
 import { useShoppingCartContext } from "./context/ShoppingCartContext";
 import { sendTransaction } from "./utils";
 
+import { Buffer } from "buffer";
+
+// @ts-ignore
+window.Buffer = Buffer;
+
 export function App() {
   return (
     <>
@@ -118,13 +123,15 @@ function Navbar({}) {
               </span>
               <div className="card-actions">
                 <button
+                  disabled={total() === 0}
                   className="btn-primary btn-block btn "
-                  onClick={() =>
-                    sendTransaction(
+                  onClick={async () => {
+                    if (total() === 0) return;
+                    await sendTransaction(
                       "28tNi72TQeprQ5A6812C91kSKKhEwbfcoY2nnNyDtuCJ",
                       total()
-                    )
-                  }
+                    );
+                  }}
                 >
                   Pay with &nbsp;
                   <img

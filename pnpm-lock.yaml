@@ -6,6 +6,7 @@ specifiers:
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react-swc': ^3.0.0
   autoprefixer: ^10.4.13
+  buffer: ^6.0.3
   daisyui: ^2.50.0
   postcss: ^8.4.21
   prettier: ^2.8.4
@@ -19,6 +20,7 @@ specifiers:
 
 dependencies:
   '@solana/web3.js': 1.73.2
+  buffer: 6.0.3
   daisyui: 2.50.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
