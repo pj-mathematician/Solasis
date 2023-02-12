@@ -312,7 +312,9 @@ function Hero() {
           <p className="mb-5 text-xl">
             Decentralized Marketplace for women owned businesses
           </p>
-          <button className="btn-primary btn">Get Started</button>
+          <a href="#business-section" className="btn-primary btn">
+            Get Started
+          </a>
         </div>
       </div>
     </div>
@@ -321,7 +323,7 @@ function Hero() {
 
 function FeaturedProducts() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-4">
+    <section className="mx-auto max-w-7xl px-4 py-4" id="business-section">
       <h2 className="mb-2 text-4xl font-bold">
         <span className="text-primary">Featured &nbsp;</span>
         Buisnesses
